@@ -1,0 +1,77 @@
+/* Nền */
+body {
+    background: linear-gradient(-120deg, white, red, white);
+    background-attachment: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+/* Hộp quà */
+#present-box {
+    position: relative;
+    width: 150px;
+    height: 150px;
+    cursor: pointer;
+}
+
+.lid, .box {
+    position: absolute;
+    width: 150px;
+    height: 75px;
+    background-color: red;
+    border: 2px solid white;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.lid {
+    top: 0;
+    transform-origin: top center;
+    transition: transform 1.5s ease-in-out;
+}
+
+.box {
+    bottom: 0;
+}
+
+/* Hiệu ứng mở nắp hộp */
+.open-lid {
+    transform: rotateX(-120deg);
+}
+
+/* Thiệp chúc mừng */
+#card {
+    margin: 15%;
+    position: absolute;
+    height: 300px;
+    width: 220px;
+    border-radius: 10px;
+    background-color: white;
+    background-image: url("https://image.freepik.com/free-vector/open-gift-box-with-heart-shape-confetti-burst-explosion-3d-valentines-day-romantic-gift_165143-438.jpg");
+    background-size: cover;
+    box-shadow: 0px 0px 20px red;
+    transform: rotate(5deg);
+    text-align: center;
+    display: none;
+}
+
+#card img {
+    margin: auto;
+    padding: 5%;
+    display: block;
+    border-radius: 50%;
+    box-shadow: 0 4px 8px 0 red;
+    width: 60px;
+    height: 60px;
+}
+
+#card h4 {
+    font-family: 'Allura', cursive;
+    font-size: 16px;
+    color: #333;
+    margin: 10px;
+    padding: 5px;
+    text-align: center;
+}

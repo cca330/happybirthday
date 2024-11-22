@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Haweli</title>
+    <link href="https://fonts.googleapis.com/css2?family=Allura&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="index.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <div id="present-box">
+        <div class="lid"></div>
+        <div class="box"></div>
+    </div>
+
+    <div id="card">
+        <h4>💘little coder💘</h4>
+        <img src="https://blob.sololearn.com/avatars/4dbe1cfc-d62f-4c78-ab70-5b6d93405f76.jpg">
+        <h4>Happy Birthday! Make a Wish. Dear brother, hope you receive everything you wish for this year. You deserve the best! Thanks for being such a great brother.💘</h4>
+    </div>
+
+    <script>
+        $(document).ready(function () {
+            $("#card").hide(); // Ẩn thiệp ban đầu
+            $("#present-box").on("click", function () {
+                $(".lid").addClass("open-lid");
+                setTimeout(() => {
+                    $("#card").fadeIn(1000); // Hiện thiệp với hiệu ứng mờ dần
+                }, 1500); // Chờ hộp mở trước khi hiển thị thiệp
+            });
+        });
+    </script>
+</body>
+</html>
